@@ -4,7 +4,33 @@ const fpsControl = new FPS();
 
 const levelSpeed = document.querySelectorAll('.level');
 const fan = document.querySelector('.blades')
+const noCameraDiv = document.getElementById('no-camera');
 
+// Intentar acceder a la cámara
+navigator.mediaDevices.getUserMedia({ video: true })
+  .then((stream) => {
+    // Mostrar canvas y ocultar el div de error
+    out3.style.display = 'block';
+    noCameraDiv.style.display = 'none';
+
+    // Asignar el stream al video
+    video3.srcObject = stream;
+    video3.play();
+
+    // Iniciar MediaPipe después de confirmar la cámara
+    const camera = new Camera(video3, {
+      onFrame: async () => await hands.send({ image: video3 }),
+      width: 480,
+      height: 480
+    });
+    camera.start();
+  })
+  .catch((err) => {
+    console.error('Camera not available:', err);
+
+    out3.style.display = 'none';
+    noCameraDiv.style.display = 'flex';
+  });
 
 function countFingers(landmarks) {
   const fingerTips = [8, 12, 16, 20]; // Índices de las puntas de los dedos

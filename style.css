@@ -662,6 +662,19 @@ textarea {
 .output3 {
     width: 480px;
     height: 480px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.no-camera {
+    display: none;
+    width: 480px;
+    height: 480px;
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
 }
 
 .requir-img {
@@ -772,6 +785,17 @@ textarea {
     .output3 {
         width: 300px;
         height: 300px;
+    }
+
+    .no-camera {
+        display: none;
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
     }
 
     .cooler-container {
