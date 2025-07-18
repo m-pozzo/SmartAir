@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SmartAir</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.2/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.1/hands.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <header>
+        <nav>
+            <span class="boton-nav" id="botonNav" onclick="toggleNavbar()">
+                <span class="raya"> </span>
+                <span class="raya"> </span>
+                <span class="raya"> </span>
+            </span>
+
+            <ul class="cont-nav" id="ulNav">
+                <li class="elemento-nav"><a href="#inicio" onclick="toggleNavbar()">Inicio</a></li>
+                <li class="elemento-nav"><a href="#ventajas" onclick="toggleNavbar()">Ventajas</a></li>
+                <li class="elemento-nav"><a href="#plan" onclick="toggleNavbar()">Planificación</a></li>
+                <li class="elemento-nav"><a href="#probar" onclick="toggleNavbar()">Probar</a></li>
+                <li class="elemento-nav"><a href="#nosotros" onclick="toggleNavbar()">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <span id="inicio"></span>
+        <section class="sect-principal">
+            <div class="cont-principal">
+                <h1 class="titulo-principal">SMARTAIR</h1>
+                <p class="frase-principal">CONTROLÁ EL AIRE CON UN GESTO</p>     
+                <div class="cont-boton">
+                    <a class="boton-principal" href="#probar" >PROBAR<img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/flecha.svg?v=1730297239206"
+                        alt="Siguiente" class="flecha" /> 
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/flecha-hover.svg?v=1730297217253"
+                        alt="Siguiente" class="flecha-hover" />
+                    </a>
+                </div>
+                   
+            </div>
+        </section>
+        <section class="sect-presentacion">
+            <h2 class="titulo-presentacion">Bienvenidos a SmartAir</h2>
+            <div class="linea"></div>
+            <p class="info">
+                Bienvenido a <strong class="subrayado">SmartAir</strong>, el futuro de
+                la comodidad en tu hogar. Un ventilador que podés encender,
+                apagar y ajustar su velocidad sin tocar un solo botón, ¡solo con un
+                movimiento de tu mano! Nuestra innovadora tecnología de control por
+                gestos te ofrece la máxima
+                <strong class="subrayado">conveniencia</strong> y
+                <strong class="subrayado">eficiencia energética</strong>. Olvidate de
+                controles remotos y botones: simplemente levanta tu mano frente a la
+                cámara, mostrando el número de dedos y deja que SmartAir haga el
+                resto. Es <strong class="subrayado">moderno</strong>,
+                <strong class="subrayado">silencioso</strong>,<strong class="subrayado">
+                    y se adapta a tu estilo de vida</strong>.
+            </p>
+        </section>
+        <span id="ventajas"></span>
+        <section class="sect-ventajas">
+            <div class="ventajas">
+                <h1 class="tit-prin-ventajas">Descubrí lo que lo hace único</h1>
+                <div class="cont-ventajas">
+                    <h3 class="tit-ventaja">Control por gestos</h3>
+                    <p class="desc-ventaja">
+                        Ajusta la velocidad del ventilador con un simple gesto.
+                        No necesitas controles ni botones, SmartAir hace el resto.
+                    </p>
+                    <h3 class="tit-ventaja">Fácil de Usar</h3>
+                    <p class="desc-ventaja">
+                        Instalalo en minutos y empezá a usarlo. Ya estarás listo para
+                        controlar tu ventilador sin esfuerzo.
+                    </p>
+                    <h3 class="tit-ventaja">Potencia Ajustable</h3>
+                    <p class="desc-ventaja">
+                        Desde una suave brisa hasta una fuerte ráfaga de aire, elegí el
+                        nivel perfecto con un simple gesto.
+                    </p>
+                </div>
+            </div>
+            <div class="img-ventaja">
+                <img src="./img/prueba.jpg" alt="" />
+            </div>
+        </section>
+        <span id="plan"></span>
+        <section class="sect-plan">
+            <h1 class="titulo-plan">Planificación</h1>
+            <p class="desc-plan">
+                A continuación vamos a explicar el proceso de desarrollo del
+                circuito, modelado y como quedo el producto final.
+            </p>
+            <article>
+                <h2 class="plan-elementos-tit">Lista de elementos usados:</h2>
+                <div class="plan-elementos-grid">
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x1</span> Placa Arduino Uno
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/arduino-uno.jpg?v=1730297636041"
+                            alt="Placa Arduino Uno" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x1</span> Cable de conexión usb para
+                            Arduino
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/cable-usb.jpg?v=1730297220517"
+                            alt="Cable usb conexion con Arduino" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x1</span> Protoboard mediana
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/proto.webp?v=1730297600493"
+                            alt="Protoboard" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x15</span> Cables de conexión para el
+                            circuito
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/cables-arduino.jpg?v=1730297233055"
+                            alt="Cables de circuito" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x1</span> Cooler AMD RGB de 12v
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/cooler.webp?v=1730297231255"
+                            alt="Cooler AMD RGB" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x1</span> Camara web
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/camara.jpg?v=1730297221875"
+                            alt="Camara web" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x1</span> Raspberry pi 4
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/raspberry.jpg?v=1730297206251"
+                            alt="Raspberry pi 4" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x3</span> Led rojo
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/led.webp?v=1730297236312"
+                            alt="Led rojo para Arduino" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x3</span> Resistencia de 10kOhm
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/resistencia.jpg?v=1730297213811"
+                            alt="Resistencias 10kOhm" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x1</span> Pantalla LCD 16x2 y
+                            controlador I2C
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/lcd.jpg?v=1730297228891"
+                            alt="Pantalla LCD 16x2 con I2C" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x1</span> Adaptador jack hembra 5.5mm
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/jack.avif?v=1730297227659"
+                            alt="Adaptador jack hembra 5.5mm" />
+                    </div>
+                    <div class="elementos-grid-item">
+                        <p class="plan-elementos-name">
+                            <span class="subrayado">x1</span> Fuente de 12v
+                        </p>
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/fuente.jpg?v=1730297218927"
+                            alt="Fuente de 12v" />
+                    </div>
+                </div>
+            </article>
+            <article class="plan-article-circuito">
+                <h2 class="tit-circuito">Diseño del circuito</h2>
+                <img src="./img/Circuito1.png" alt="Imagen de las conexiones del circuito" />
+            </article>
+            <article class="plan-article-modelado">
+                <h2 class="tit-modelado">Modelado 3D</h2>
+                <p class="desc-modelado">
+                    Para la caja que va a contener los circuitos del producto, usamos
+                    Blender para diseñarla en 3d y posteriormente imprimirla. Aqui se pueden ver los renderizados:
+                </p>
+                <div class="cont-img-render">
+                    <ul class="cont-img">
+                        <li><img src="./img/Render-sin-fondo.png" alt="Render.png"></li>
+                        <li><img src="./img/Render-con-fondo.png" alt="Render.png"></li>
+                    </ul>
+                </div>
+                <div class="grid-modelo-3d">
+                    <div class="img-1">
+                        <img src="./img/3D.jpg" alt="">
+                    </div>
+                    <div class="img-2">
+                        <img src="./img/3D-2.jpg" alt="">
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h1 class="tit-tecnologias">Tecnologías utilizadas</h1>
+                <marquee class="cont-marquee" scrollamount="13">
+                    <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/js.png?v=1730296247570"
+                        alt="Javascript.png" class="marquee-img" />
+                    <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/html.png?v=1730296619443"
+                        alt="HTML.png" class="marquee-img" />
+                    <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/css.svg?v=1730296672657"
+                        alt="css.png" class="marquee-img" />
+                    <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/python.svg?v=1730296866968"
+                        alt="Python.png" class="marquee-img" />
+                    <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/mediaPipe.png?v=1730212840373"
+                        alt="Mediapipe.png" class="marquee-img" />
+                    <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/opencv.png?v=1730296723603"
+                        alt="Opencv.png" class="marquee-img" />
+                    <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/Blender_logo_no_text.svg.png?v=1730296920684"
+                        alt="Blender.png" class="marquee-img" />
+                    <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/arduino.png?v=1730213436504"
+                        alt="Arduino.png" class="marquee-img" />
+                </marquee>
+                <span id="probar"></span>
+            </article>
+        </section>
+        <section class="sect-prueba">
+            <h1 class="prueba-tit"> Probalo ya!</h1>
+            <div class="cooler-requir-container">
+                <div class="requir-container">
+                    <div style="display: flex; justify-content: start; width: 100%;">
+                        <img src="./img/exclamacion.svg" alt="Importante" class="requir-img">
+                    </div>
+                    <h3 class="prueba-requir-tit">¿Qué se necesita para probarlo?</h3>
+                    <ul class="prueba-lista-requir">
+                        <li>Una camára (de tu celular o la camara web de tu computadora).
+                        </li>
+                        <li>Conexión a Internet.</li>
+                        <li>En lo posible estar en un ambiente con una visibilidad clara y
+                            un fondo plano.</li>
+                        <li>
+                            Para elegir el nivel de potencia  se recomienda usar los dedos indíce, dedo medio y anular
+                        </li>
+                    </ul>
+                </div>
+                <div class="cooler-cam-container">
+                    <h3 class="cam-tit">Camára con MediaPipe</h3>
+                    <div class="cam-container">
+                        <video class="input_video3" style="display: none;"></video>
+                        <canvas class="output3"></canvas>
+                    </div>
+                    <div style="display: none;" class="control3"></div>
+                    <div class="cooler-container">
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/cover.png?v=1730342389422"
+                            alt="" class="cover">
+                        <img src="https://cdn.glitch.global/da2897e9-23e5-4fe7-af65-652ebb31bd58/blades.png?v=1730342386593"
+                            alt="" class="blades">
+                        <div class="prueba-cooler-niveles">
+                            <p class="level">Apagado</p>
+                            <div
+                                style="display: flex; flex-direction: row;gap: 30px; align-items: center; justify-content: center;">
+                                <p class="level">1</p>
+                                <p class="level">2</p>
+                                <p class="level">3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <span id="nosotros"></span>
+        <section class="sect-nosotros">
+            <article class="integrantes">
+                <h2 class="tit-integrantes">Integrantes</h2>
+                <div class="integrantes-flex">
+                    <div class="integrante-flex-item">
+                        <h3 class="integrante-item-tit">Ignacio Orsi</h3>
+                        <img src="./img/Orsi.png" alt="" />
+                    </div>
+                    <div class="integrante-flex-item">
+                        <h3 class="integrante-item-tit">Martín Taborda</h3>
+                        <img src="./img/Teibor.png" alt="" />
+
+                    </div>
+                    <div class="integrante-flex-item">
+                        <h3 class="integrante-item-tit">Tomás Giurdanella</h3>
+                        <img src="./img/Giurda.png" alt="" />
+
+                    </div>
+                </div>
+                <div class="integrantes-flex">
+                    <div class="integrante-flex-item">
+                        <h3 class="integrante-item-tit">Nahuel Iturra</h3>
+                        <img src="./img/Iturra.png" alt="" />
+                    </div>
+                    <div class="integrante-flex-item">
+                        <h3 class="integrante-item-tit">Martín Pozzo</h3>
+                        <img src="./img/Tin.png" alt="" />
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="content-footer-container">
+            <article class="footer-article-one"
+                style="display: flex; flex-wrap: wrap; align-items:center; flex-direction: row; justify-content: space-between; margin-top: 30px;">
+                <div class="footer-mapsite">
+                    <ul class="mapsite-ul">
+                        <h3 class="sitemap-tit">Mapa de sitio</h3>
+                        <a class="mapsite-items" href="#inicio">Inicio</a>
+                        <a class="mapsite-items" href="#ventajas">Ventajas</a>
+                        <a class="mapsite-items" href="#plan">Planificación</a>
+                        <a class="mapsite-items" href="#probar">Probar</a>
+                        <a class="mapsite-items" href="#nosotros">Nosotros</a>
+                    </ul>
+                </div>
+                <div class="footer-contact-container">
+                    <h3 class="contact-tit">Contactate</h3>
+                    <p class="contact-desc">
+                        Propuestas, soporte tecnico y demás consultas
+                    </p>
+                    <form action="">
+                        <input type="text" placeholder="Nombre" required />
+                        <input type="mail" placeholder="Mail" required />
+                        <textarea name="" id="" placeholder="Asunto..."></textarea>
+                        <input type="submit" value="Enviar" class="btn-send-contact" />
+                    </form>
+                </div>
+            </article>
+            <article style="text-align: center; padding: 30px 0">
+                <p style="font-family: Neue Machina" class="copy">
+                    Copyright Ⓒ 2024 SmartAir - Todos los derechos reservados
+                </p>
+            </article>
+        </section>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/hands.js"></script>
+</body>
+
+</html>
